@@ -1,0 +1,10 @@
+{
+  "list":[
+    {"name":"Sandeep", "country":"India","score":75},
+    {"name":"John", "country":"UK","score":54},
+    {"name":"Miller", "country":"US","score":24},
+    {"name":"Bapi", "country":"India","score":71},
+    {"name":"Tushar", "country":"UK","score":51},
+    {"name":"Roji", "country":"US","score":22}
+  ]
+}

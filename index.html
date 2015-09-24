@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>W3 AppML Modeling Language Example</title>
+    </head>
+    <body >
+    <div appml-data="students.json" appml-controller="myController">
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th>Country</th>
+                <th>Score</th>
+            </tr>
+            <tr appml-repeat="list">
+                <td>{{name}}</td>
+                <td>{{country}}</td>
+                <td>{{score}}</td>
+            </tr>
+        </table>
+    </div>
+    </body>
+    <script src="appml.js"></script>
+    <script>
+        function myController($appml) {
+            if ($appml.message == "display") {
+                if ($appml.display.name == "score") {
+                    var score = $appml.display.value ;
+                    if(score< 30){
+                        $appml.display.value += " <b>FAIL</b>";
+                    }else{
+                        $appml.display.value += " PASS";
+                    }
+                }
+            }
+        }
+    </script>
+</html> 
